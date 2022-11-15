@@ -8,6 +8,10 @@ build/
 #####################
 ### SPICE IGNORES ###
 #####################
+cpp/cspice/
+cpp/cspice.tar.Z
+cpp/example
+
 kernels/generic_kernels/spk/
 
 kernels/rosetta_kernels/ck/

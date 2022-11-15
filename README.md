@@ -50,17 +50,18 @@ You'll need to install the `spiceypy` and `numpy` modules.  These can be install
 Once those are installed, you can simply run `python example.py` from within the `python/` subdirectory of this project.
 
 ## C++ (Specific instructions for Linux provided)
-*NOTE: This is currently NOT completed.  I intend to update it very soon.*
-
 If you wish to build the C++ project on your own, you'll need to know how to link and compile C++ code on your machine.  This will include downloading the correct binaries (which can be found here: https://naif.jpl.nasa.gov/naif/toolkit_C.html), and then linking the cspice binaries and including the `SpiceUsr.h` file into your project.  
 
 Instructions for doing this on a 64-bit linux machine are now provided:
 
+*NOTE: If you can run a bash script, you can skip steps 2-5 by running `setup.sh` from within the `cpp/` directory*
+
 1. `cd cpp` (move into the `cpp/` example directory)
 2. `wget https://naif.jpl.nasa.gov/pub/naif/toolkit//C/PC_Linux_GCC_64bit/packages/cspice.tar.Z` (Download the [cspice.tar.Z](https://naif.jpl.nasa.gov/pub/naif/toolkit//C/PC_Linux_GCC_64bit/packages/cspice.tar.Z))
 3. `tar -xvf cspice.tar.Z` (untar the cspice files)
-4. `g++ -o example example.cpp -I cspice/include/ -L cspice/include/cspice.a` (Build the project)
-5. `./example` (run the project.  If it cannot be run, try first changing permissions using `chmod +x example`)
+4. `mkdir build; cd build; cmake ..; make` (Build the project)
+5. `mv example ../; cd ../` (Move the compiled `example` executable back to the `cpp/` directory)
+6. `./example` (run the project.  If it cannot be run, try first changing permissions using `chmod +x example`)
 
 # Questions:
 If you have any follow-up questions related to SPICE, or any questions/issues related to any of these tutorials, please don't hesitate to reach out to Chris Gnam:  crgnam@buffalo.edu 
