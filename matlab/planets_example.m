@@ -28,8 +28,8 @@ et_span = linspace(et_start, et_end, 10000);
 % https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/frames.html
 % Also: https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/17_frames_and_coordinate_systems.pdf
 
-% FRAME = 'J2000';
-FRAME = 'ECLIPJ2000';
+FRAME = 'J2000';
+% FRAME = 'ECLIPJ2000';
 
 ORIGIN = 'SSB';
 % ORIGIN = 'SUN';

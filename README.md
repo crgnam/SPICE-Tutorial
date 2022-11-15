@@ -45,11 +45,13 @@ First, make sure that you have the `MICE` (the `MATLAB` version of SPICE) downlo
 Once it is downloaded and added to your `MATLAB` path, you can simply run the `matlab/example.m` script.
 
 ## Python
-You'll need to install the `spiceypy`,`numpy`,`matplotlib` modules.  These can be installed with either the `pip` or `conda` package managers (though, I personally always recommend `conda` or its opensource reimplementation, [mambaforge](https://github.com/conda-forge/miniforge)).
+You'll need to install the `spiceypy` and `numpy` modules.  These can be installed with either the `pip` or `conda` package managers (though, I personally always recommend `conda` or its opensource reimplementation, [mambaforge](https://github.com/conda-forge/miniforge)).
 
 Once those are installed, you can simply run `python example.py` from within the `python/` subdirectory of this project.
 
 ## C++ (Specific instructions for Linux provided)
+*NOTE: This is currently NOT completed.  I intend to update it very soon.*
+
 If you wish to build the C++ project on your own, you'll need to know how to link and compile C++ code on your machine.  This will include downloading the correct binaries (which can be found here: https://naif.jpl.nasa.gov/naif/toolkit_C.html), and then linking the cspice binaries and including the `SpiceUsr.h` file into your project.  
 
 Instructions for doing this on a 64-bit linux machine are now provided:

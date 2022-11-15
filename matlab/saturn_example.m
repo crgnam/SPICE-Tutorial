@@ -24,6 +24,10 @@ et_start = cspice_str2et(datestr(start_date));
 et_end = cspice_str2et(datestr(end_date));
 et_span = linspace(et_start, et_end, 1000);
 
+% Convert to x-axis for plotting:
+% https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/FORTRAN/spicelib/et2utc.html
+t_plt = datetime(cspice_et2utc(et_span,'C',1),'InputFormat','yyyy MMM dd HH:mm:ss.SS');
+
 % Reference Frame Definition:
 % https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/frames.html
 % Also: https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/Tutorials/pdf/individual_docs/17_frames_and_coordinate_systems.pdf
@@ -46,7 +50,7 @@ for ii = 1:length(moons)
         
     subplot(1,2,2)
         velocity_norm = sqrt(sum(states(4:6,:).*states(4:6,:),1));
-        plot(velocity_norm); hold on
+        plot(t_plt,velocity_norm); hold on
         
 end
 subplot(1,2,1)
@@ -59,6 +63,7 @@ subplot(1,2,1)
 subplot(1,2,2)
     title('Velocities')
     ylabel('km/s')
+    xlabel('Date')
 
 %% Get the positions of the moons relative to Enceladus:
 figure(2)
