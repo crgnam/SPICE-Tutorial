@@ -11,7 +11,7 @@ int main(){
     std::cout << "Hello SPICE!\n";
 
     // Furnsh all spice kernels:
-    furnsh_c("../../kernels/meta_kernel.tm");
+    furnsh_c("../rosetta_kernel.tm");
 
     // Get the ephemeris times:
     double et_start;

@@ -35,6 +35,7 @@ If you cannot run a bash script on your system (for example, if you are on Windo
 | [ROS_160929_STEP.TSC](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/sclk/ROS_160929_STEP.TSC) | Spacecraft Clock kernel (SCLK) | `kernels/rosetta_kernels/sclk/` | 17Kb |
 | [RORB_DV_257_02_______00344.BSP](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/spk/RORB_DV_257_02_______00344.BSP)  | Ephemeris kernel (SPK) for ROSETTA | `kernels/rosetta_kernels/spk/` | 92Mb |
 | [CORB_DV_257_02_______00344.BSP](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/spk/CORB_DV_257_02_______00344.BSP) | Ephemeris kernel (SPK) for Comet 67P | `kernels/rosetta_kernels/spk/` | 213Kb | 
+| [ROS_CG_K024_OMSDLAM_N_V1.BDS](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/dsk/ROS_CG_K024_OMSDLAM_N_V1.BDS) | Digital Shape kernel (DSK) for Comet 67P | `kernels/rosetta_kernels/dsk/` | 2Mb |
 
 
 # Example Code
