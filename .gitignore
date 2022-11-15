@@ -5,6 +5,17 @@
 *.swp*
 build/
 
+#####################
+### SPICE IGNORES ###
+#####################
+kernels/generic_kernels/spk/
+
+kernels/rosetta_kernels/ck/
+kernels/rosetta_kernels/dsk/
+kernels/rosetta_kernels/fk/
+kernels/rosetta_kernels/sclk/
+kernels/rosetta_kernels/spk/
+
 ######################
 ### PYTHON IGNORES ###
 ######################

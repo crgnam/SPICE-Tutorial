@@ -4,6 +4,40 @@ A simple demonstration of some of the capabilities of SPICE is provided in `MATL
 
 The `MATLAB` and `python` demos should work natively on any machine, while the `C++` demo only provides instructions for building on Linux.  It should be relatively straight forward to build on MacOS, but building on Windows without WSL will require some experience in compiling C++ on windows.
 
+# Getting the Kernels
+Before running any of the example code, you'll need to download the correct kernels.  If you are able to execute a bash script you can simply run the `get_kernels.sh` script.  If not, you will need to manually obtain the following files:
+If you cannot run a bash script on your system (for example, if you are on Windows without WSL), you must manually download the following SPICE kernels:
+
+## Included in the Repository:
+| Link to File | Description | Location to put it | Size |
+| ------------ | ----------- | ------------------ | ---- |
+| [naif0012.tls](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/naif0012.tls) | Leap Second kernel (LSK) | `kernels/generic_kernels/lsk/` | 5.2Kb |
+| [pck00010.tpc](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00010.tpc) | Planetary Constants kernel (PCK) | `kernels/generic_kernels/pck/` | 124Kb |
+| [Gravity.tpc](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/Gravity.tpc) | Planetary Gravity kernel (PCK) | `kernels/generic_kernels/pck/` | 15Kb |
+
+## Required for planets_example.m
+| Link to File | Description | Location to put it | Size |
+| ------------ | ----------- | ------------------ | ---- |
+| [de430.bsp](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp) | Planetary Ephemerides | `kernels/generic_kernels/spk/` | 115MB |
+
+## Required for saturn_example.m
+| Link to File | Description | Location to put it | Size |
+| ------------ | ----------- | ------------------ | ---- |
+| [sat441.bsp](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/sat441.bsp) | Saturn Moons Ephemerides | `kernels/generic_kernels/spk/` | 631Mb |
+
+## Required for rosetta_example.m
+| Link to File | Description | Location to put it | Size |
+| ------------ | ----------- | ------------------ | ---- |
+| [CATT_DV_257_03_______00344.BC](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/ck/CATT_DV_257_03_______00344.BC) | Attitude kernel (CK) for Comet 67P | `kernels/rosetta_kernels/ck/` | 2.1Mb |
+| [ROS_SC_REC_160101_160601_V01.BC](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/ck/ROS_SC_REC_160101_160601_V01.BC) | Attitude kernel (CK) for ROSETTA | `kernels/rosetta_kernels/ck/`| 17Mb |
+| [ROS_CHURYUMOV_V01.TF](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/fk/ROS_CHURYUMOV_V01.TF) | Frames kernel (FK) for Comet 67P | `kernels/rosetta_kernels/fk/` | 2Kb |
+| [ROS_V37.TF](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/fk/ROS_V37.TF) | Frames kernel (FK) for ROSETTA | `kernels/rosetta_kernels/fk/` | 237 Kb |
+| [ROS_160929_STEP.TSC](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/sclk/ROS_160929_STEP.TSC) | Spacecraft Clock kernel (SCLK) | `kernels/rosetta_kernels/sclk/` | 17Kb |
+| [RORB_DV_257_02_______00344.BSP](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/spk/RORB_DV_257_02_______00344.BSP)  | Ephemeris kernel (SPK) for ROSETTA | `kernels/rosetta_kernels/spk/` | 92Mb |
+| [CORB_DV_257_02_______00344.BSP](https://naif.jpl.nasa.gov/pub/naif/ROSETTA/kernels/spk/CORB_DV_257_02_______00344.BSP) | Ephemeris kernel (SPK) for Comet 67P | `kernels/rosetta_kernels/spk/` | 213Kb | 
+
+
+# Example Code
 ## MATLAB
 First, make sure that you have the `MICE` (the `MATLAB` version of SPICE) downloaded and added to your `MATLAB` path.  Download the correct version for your operating system here:  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB.html
 
