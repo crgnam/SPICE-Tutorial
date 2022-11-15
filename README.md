@@ -5,7 +5,7 @@ A simple demonstration of some of the capabilities of SPICE is provided in `MATL
 The `MATLAB` and `python` demos should work natively on any machine, while the `C++` demo only provides instructions for building on Linux.  It should be relatively straight forward to build on MacOS, but building on Windows without WSL will require some experience in compiling C++ on windows.
 
 # Getting the Kernels
-Before running any of the example code, you'll need to download the correct kernels.  If you are able to execute a bash script you can simply run the `get_kernels.sh` script.  If not, you will need to manually obtain the following files:
+Before running any of the example code, you'll need to download the correct kernels.  If you are able to execute a bash script (e.g. you are using Linux or WSL) you can simply run the `get_kernels.sh` script.  If not, you will need to manually obtain the following files:
 If you cannot run a bash script on your system (for example, if you are on Windows without WSL), you must manually download the following SPICE kernels:
 
 ## Included in the Repository:
