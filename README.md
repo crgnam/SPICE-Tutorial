@@ -5,8 +5,7 @@ A simple demonstration of some of the capabilities of SPICE is provided in `MATL
 The `MATLAB` and `python` demos should work natively on any machine, while the `C++` demo only provides instructions for building on Linux.  It should be relatively straight forward to build on MacOS, but building on Windows without WSL will require some experience in compiling C++ on windows.
 
 # Getting the Kernels
-Before running any of the example code, you'll need to download the correct kernels.  If you are able to execute a bash script (e.g. you are using Linux or WSL) you can simply run the `get_kernels.sh` script.  If not, you will need to manually obtain the following files:
-If you cannot run a bash script on your system (for example, if you are on Windows without WSL), you must manually download the following SPICE kernels:
+Before running any of the example code, you'll need to download the correct kernels.  If you are able to execute a bash script (e.g. you are using Linux or WSL) you can simply run the `get_kernels.sh` script.  If you cannot run a bash script on your system (for example, if you are on Windows without WSL), you must manually download the following SPICE kernels:
 
 ## Included in the Repository:
 | Link to File | Description | Location to put it | Size |
@@ -40,9 +39,11 @@ If you cannot run a bash script on your system (for example, if you are on Windo
 
 # Example Code
 ## MATLAB
-First, make sure that you have the `MICE` (the `MATLAB` version of SPICE) downloaded and added to your `MATLAB` path.  Download the correct version for your operating system here:  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB.html
+First, make sure that you have `MICE` (the `MATLAB` version of SPICE) downloaded and added to your `MATLAB` path.  Download the correct version for your operating system here:  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB.html
 
-Once it is downloaded and added to your `MATLAB` path, you can simply run the `matlab/example.m` script.
+Once it is downloaded and added to your `MATLAB` path, you can simply run any of the `MATLAB` scripts.
+
+*NOTE: Line 7 of each `MATLAB` script attempts to add `MICE` to the MATLAB path.  If you've added it separately you can comment out this line, or if you want it to be added when the script is run, you can change the path used to the path to wherever you have put the `MICE` toolbox.*
 
 ## Python
 You'll need to install the `spiceypy` and `numpy` modules.  These can be installed with either the `pip` or `conda` package managers (though, I personally always recommend `conda` or its opensource reimplementation, [mambaforge](https://github.com/conda-forge/miniforge)).
